@@ -1,0 +1,48 @@
+Center so aceita um filho 
+como se fosse um return no react se quisermos que tenha mais coisas dentro so envolvermos tudo dentro de uma tag so 
+como nesse exemplo
+Center(
+  child: Column(
+    mainAxisSize: MainAxisSize.min,
+    children: const [
+      Text(
+        "Gabriela",
+        style: TextStyle(fontSize: 24),
+      ),
+      Text(
+        "Alejandra",
+        style: TextStyle(fontSize: 24),
+      ),
+    ],
+  ),
+)
+
+
+O Image.asset nao pode ser usado com const entao se tiver em ua lista const
+basta remover o const da linha e colocar indidualmente em cada item 
+Center(
+  child: Column(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      const Text(
+        "Gabriela",
+        style: TextStyle(
+          fontSize: 85,
+          fontFamily: "Koulen",
+        ),
+      ),
+      Image.asset(
+        "assets/images/foto-pessoal.png", 
+        width: 200, 
+      ),
+      const Text(
+        "Alejandra",
+        style: TextStyle(
+          fontSize: 85,
+          fontFamily: "Koulen",
+          color: Color.fromARGB(255, 90, 0, 102),
+        ),
+      ),
+    ],
+  ),
+)
