@@ -81,7 +81,7 @@ class Home extends StatelessWidget {
                           Row(
                             children: [
                               Image.asset(
-                                "assets/images/bolo-de-aniversario.png",
+                                "assets/images/bolo-de-aniversario.png", width: 20,
                               ),
                               SizedBox(width: 12),
                               Text(
@@ -186,7 +186,8 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Wrap(
-                            spacing: 20, //espaçamento uniforme entre os elementos
+                            spacing:
+                                20, //espaçamento uniforme entre os elementos
                             children: [
                               Image.asset("assets/images/icon-react.png"),
                               Image.asset("assets/images/icon-angular.png"),
@@ -205,7 +206,9 @@ class Home extends StatelessWidget {
                             spacing: 20,
                             children: [
                               Image.asset("assets/images/icon-sass.png"),
-                              Image.asset("assets/images/icon-styled-components.png",),
+                              Image.asset(
+                                "assets/images/icon-styled-components.png",
+                              ),
                               Image.asset("assets/images/icon-css.png"),
                             ],
                           ),
@@ -213,7 +216,6 @@ class Home extends StatelessWidget {
                       ),
                     ],
                   ),
-
 
                   //BACKEND
                   SizedBox(height: 40),
@@ -234,7 +236,8 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Wrap(
-                            spacing: 20, //espaçamento uniforme entre os elementos
+                            spacing:
+                                20, //espaçamento uniforme entre os elementos
                             children: [
                               Image.asset("assets/images/icon-c.png"),
                               Image.asset("assets/images/icon-c#.png"),
@@ -253,7 +256,7 @@ class Home extends StatelessWidget {
                             spacing: 20,
                             children: [
                               Image.asset("assets/images/icon-fastapi.png"),
-                              Image.asset("assets/images/icon-dj.png",),
+                              Image.asset("assets/images/icon-dj.png"),
                               Image.asset("assets/images/icon-node-js.png"),
                               Image.asset("assets/images/icon-spring.png"),
                             ],
@@ -269,7 +272,7 @@ class Home extends StatelessWidget {
                             spacing: 20,
                             children: [
                               Image.asset("assets/images/icon-postgree.png"),
-                              Image.asset("assets/images/icon-sqlite.png",),
+                              Image.asset("assets/images/icon-sqlite.png"),
                               Image.asset("assets/images/icon-mysql.png"),
                             ],
                           ),
@@ -277,6 +280,43 @@ class Home extends StatelessWidget {
                       ),
                     ],
                   ),
+
+                  SizedBox(height: 90),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Galeria de Projetos",
+                        style: TextStyle(fontFamily: "Koulen", fontSize: 22),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 15),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Veja alguns projetos em que tive a honra de participar ",
+                        style: TextStyle(fontFamily: "Koulen", fontSize: 15),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 20),
+
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Tela2()),
+                      ); // essa linha é a linha que permite o botao ser um botao de navegação
+                    },
+                    child: Text("Ir para Galeria de Projetos", style: TextStyle(fontFamily: "Koulen", fontSize: 15, color: Color.fromARGB(255, 90, 0, 102)),),
+                  ),
+
+                  SizedBox(height: 80),
 
                 ],
               ),
