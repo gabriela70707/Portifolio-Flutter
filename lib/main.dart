@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'tela2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -130,7 +131,7 @@ class Home extends StatelessWidget {
                           SizedBox(width: 105),
                           Row(
                             children: [
-                              Image.asset("assets/images/github.png"),
+                              Image.asset("assets/images/github.png", width: 20,),
                               SizedBox(width: 12),
                               Text(
                                 "Gabriela70707",
@@ -370,14 +371,3 @@ class BlurCircle extends StatelessWidget {
   }
 }
 
-class Tela2 extends StatelessWidget {
-  const Tela2({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Tela 2")),
-      body: const Center(child: Text("Você está na Tela 2")),
-    );
-  }
-}
