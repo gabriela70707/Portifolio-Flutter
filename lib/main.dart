@@ -11,7 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Home());
+    return const MaterialApp(
+      home: Home(),
+      //Tirando a marca de debug
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
 
@@ -40,6 +44,26 @@ class Home extends StatelessWidget {
       ),
       body: Stack(
         children: [
+          Positioned(
+            top: 90,
+            left: 220,
+            child: Image.asset(
+              'assets/images/blur_rosa.png',
+              width: 370,
+              height: 370,
+            ),
+          ),
+
+          // Imagem de blur - fundo direito
+          Positioned(
+            bottom: 150,
+            right: 80,
+            child: Image.asset(
+              'assets/images/blur_rosa.png',
+              width: 180,
+              height: 180,
+            ),
+          ),
           SingleChildScrollView(
             //permite scrolar a tela
             child: Center(
@@ -82,7 +106,8 @@ class Home extends StatelessWidget {
                           Row(
                             children: [
                               Image.asset(
-                                "assets/images/bolo-de-aniversario.png", width: 20,
+                                "assets/images/bolo-de-aniversario.png",
+                                width: 20,
                               ),
                               SizedBox(width: 12),
                               Text(
@@ -131,7 +156,10 @@ class Home extends StatelessWidget {
                           SizedBox(width: 105),
                           Row(
                             children: [
-                              Image.asset("assets/images/github.png", width: 20,),
+                              Image.asset(
+                                "assets/images/github.png",
+                                width: 20,
+                              ),
                               SizedBox(width: 12),
                               Text(
                                 "Gabriela70707",
@@ -314,36 +342,23 @@ class Home extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => Tela2()),
                       ); // essa linha é a linha que permite o botao ser um botao de navegação
                     },
-                    child: Text("Ir para Galeria de Projetos", style: TextStyle(fontFamily: "Koulen", fontSize: 15, color: Color.fromARGB(255, 90, 0, 102)),),
+                    child: Text(
+                      "Ir para Galeria de Projetos",
+                      style: TextStyle(
+                        fontFamily: "Koulen",
+                        fontSize: 15,
+                        color: Color.fromARGB(255, 90, 0, 102),
+                      ),
+                    ),
                   ),
 
                   SizedBox(height: 80),
-
                 ],
               ),
             ),
           ),
-          // Imagem de blur - topo esquerdo
-          Positioned(
-            top: 90,
-            left: 220,
-            child: Image.asset(
-              'assets/images/blur_rosa.png',
-              width: 370,
-              height: 370,
-            ),
-          ),
 
-          // Imagem de blur - fundo direito
-          Positioned(
-            bottom: 150,
-            right: 80,
-            child: Image.asset(
-              'assets/images/blur_rosa.png',
-              width: 180,
-              height: 180,
-            ),
-          ),
+          // Imagem de blur - topo esquerdo
         ],
       ),
     );
@@ -370,4 +385,3 @@ class BlurCircle extends StatelessWidget {
     );
   }
 }
-

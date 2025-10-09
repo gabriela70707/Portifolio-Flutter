@@ -46,3 +46,8 @@ Center(
     ],
   ),
 )
+
+
+
+STACK 
+O Stack renderiza os filhos na ordem em que aparecem. Os primeiros ficam mais ao fundo, e os últimos ficam por cima.
