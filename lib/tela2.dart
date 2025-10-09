@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
+
 class Tela2 extends StatelessWidget {
   const Tela2({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width; // pega o tamanho da tela
+
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
@@ -45,6 +49,7 @@ class Tela2 extends StatelessWidget {
               height: 180,
             ),
           ),
+
           SingleChildScrollView(
             child: Center(
               child: Column(
@@ -61,7 +66,7 @@ class Tela2 extends StatelessWidget {
                         children: [
                           Image.asset(
                             "assets/images/foto-space-apps.png",
-                            width: 190,
+                            width: screenWidth * 0.4,
                           ),
                         ],
                       ),
@@ -170,7 +175,7 @@ class Tela2 extends StatelessWidget {
                         children: [
                           Image.asset(
                             "assets/images/unasp.png",
-                            width: 215,
+                            width: screenWidth * 0.45,
                           ),
                         ],
                       ),
@@ -184,7 +189,7 @@ class Tela2 extends StatelessWidget {
                         children: [
                           Image.asset(
                             "assets/images/conheca-seus-herois.png",
-                            width: 178,
+                            width: screenWidth * 0.4,
                           ),
                         ],
                       ),
